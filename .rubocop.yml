@@ -1,0 +1,23 @@
+require: rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.0
+  #対象外を指定
+  Exclude:
+    - bin/*
+    - db/**/*
+    - log/*
+    - tmp/*
+    - public/**/*
+  NewCops: enable
+Style/AsciiComments:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Layout/LineLength:
+  Exclude:
+    - spec/**/*
+  Max: 128

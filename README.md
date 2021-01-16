@@ -1,12 +1,12 @@
 # README
 
-# DockerでDBを動かす
+## DockerでDBを動かす
 
 ```bash
 docker-compose up
 ```
 
-# GitHooksを有効にする
+## GitHooksを有効にする
 
 ```bash
 bundle exec overcommit --install

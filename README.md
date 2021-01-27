@@ -1,4 +1,4 @@
-[![rhiroe](https://circleci.com/gh/rhiroe/altair.svg?style=shield)](<LINK>)
+[![rhiroe](https://circleci.com/gh/rhiroe/altair.svg?style=shield)](https://app.circleci.com/pipelines/github/rhiroe/altair)
 
 # アプリについて
 

@@ -1,3 +1,5 @@
+[![rhiroe](https://circleci.com/gh/rhiroe/altair.svg?style=svg)](<LINK>)
+
 # README
 
 This README would normally document whatever steps are necessary to get the

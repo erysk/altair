@@ -9,6 +9,7 @@ AllCops:
     - log/*
     - tmp/*
     - public/**/*
+    - node_modules/**/*
   NewCops: enable
 Style/AsciiComments:
   Enabled: false

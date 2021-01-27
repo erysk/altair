@@ -12,8 +12,8 @@
 $ git clone git@github.com:rhiroe/altair.git
 $ cd altair
 
-$ bundle install
-$ yarn install
+$ bin/bundle install
+$ bin/yarn install
 
 # データベースのDockerコンテナを立ち上げる
 $ docker-compose up

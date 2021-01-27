@@ -1,26 +1,41 @@
-[![rhiroe](https://circleci.com/gh/rhiroe/altair.svg?style=svg)](<LINK>)
+[![rhiroe](https://circleci.com/gh/rhiroe/altair.svg?style=shield)](<LINK>)
 
-# README
+# アプリについて
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+現状特に何も実装してません。
 
-Things you may want to cover:
+## 環境構築
 
-* Ruby version
+```bash
+# Rubyは.ruby-versionに記載されているバージョンのものをご用意ください。
 
-* System dependencies
+$ git clone git@github.com:rhiroe/altair.git
+$ cd altair
 
-* Configuration
+$ bundle install
+$ yarn install
 
-* Database creation
+# データベースのDockerコンテナを立ち上げる
+$ docker-compose up
 
-* Database initialization
+# PostgreSQLライブラリがローカルにない場合はインストールしてください
+# 例: Homebrewを使っている場合
+$ brew install postgresql
 
-* How to run the test suite
+$ bin/rails db:create
+$ bin/rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+$ bin/rails server
+```
 
-* Deployment instructions
+## 開発準備
+```bash
+# コミット時にRubocopのチェックが入る(任意)
+$ bundle exec overcommit --install
+```
 
-* ...
+## テスト
+
+```bash
+$ bin/rspec
+```

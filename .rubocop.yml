@@ -11,14 +11,17 @@ AllCops:
     - public/**/*
     - node_modules/**/*
   NewCops: enable
+
 Style/AsciiComments:
   Enabled: false
+
 Style/Documentation:
   Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
-Layout/LineLength:
-  Exclude:
-    - spec/**/*
-  Max: 128
+    - config/environments/*

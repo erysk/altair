@@ -32,10 +32,24 @@ module Altair
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
+    config.time_zone = 'Tokyo'
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.active_record.default_timezone = :local
 
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.generators.template_engine = :slim
+
+    config.generators.assets = false
+    config.generators.helper = false
+
+    config.generators.test_framework :rspec,
+                                     fixtures: true,
+                                     request_specs: true,
+                                     view_specs: false,
+                                     helper_specs: false,
+                                     routing_specs: false,
+                                     controller_specs: false
   end
 end

@@ -13,7 +13,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:3.0.0
+      - image: circleci/ruby:3.0.0-node-browsers
         <<: *dockerhub_credentials
         environment:
           BUNDLER_VERSION: 2.2.5
@@ -67,17 +67,17 @@ jobs:
 
       - restore_cache:
           keys:
-            - missions_app-yarn-{{ checksum "yarn.lock" }}
-            - missions_app-yarn-
+            - yarn-{{ .Environment.CIRCLECI_CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Environment.CIRCLECI_CACHE_VERSION }}-
 
-      # - run:
-      #     name: yarn install
-      #     command: yarn install --cache-folder ~/.cache/yarn
-      #
-      # - save_cache:
-      #     key: missions_app-yarn-{{ checksum "yarn.lock" }}
-      #     paths:
-      #       - ~/.cache/yarn
+      - run:
+          name: yarn install
+          command: yarn install --cache-folder ~/.cache/yarn
+
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
 
       # Database setup
       - run: bundle exec rake db:create db:schema:load

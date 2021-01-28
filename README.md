@@ -18,7 +18,7 @@ $ bin/yarn install
 # データベースのDockerコンテナを立ち上げる
 $ docker-compose up
 
-# PostgreSQLライブラリがローカルにない場合はインストールしてください
+# PostgreSQLライブラリがローカルにない場合はインストールしてください(psqlコマンドが使えればいいのでバージョンはなんでもいいです)。
 # 例: Homebrewを使っている場合
 $ brew install postgresql
 

@@ -59,5 +59,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'active_hash', '~> 3.1'
 gem 'cable_ready', '~> 4.5'
 gem 'redis', '~> 4.2'
-gem 'slim-rails', '~> 3.2'
 gem 'stimulus_reflex', '~> 3.4'
